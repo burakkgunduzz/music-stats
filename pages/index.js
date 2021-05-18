@@ -4,23 +4,22 @@ import Form from "../components/Form";
 import { useTopTracks } from "../hooks/useTopTracks";
 import { useTopArtists } from "../hooks/useTopArtists";
 import { useArtistDetail } from "../hooks/useArtistDetail";
+import TracksChart from "../components/TracksChart";
+import ArtistsChart from "../components/ArtistsChart";
 
 export default function Home() {
   const [formData, setFormData] = useState({ country: "", number: "" });
 
   const [topTracks, setTopTracks] = useState({});
   const [topArtists, setTopArtists] = useState({});
-  const [artistDetail, setArtistDetail] = useState({});
 
   const { getTopTracks } = useTopTracks(setTopTracks);
   const { getTopArtists } = useTopArtists(setTopArtists);
-  const { getArtistInfo } = useArtistDetail(setArtistDetail);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    getTopTracks("Spain", "5");
-    getArtistInfo("Queen");
-    getTopArtists("Turkey", "10");
+    getTopTracks(formData.country, formData.number);
+    getTopArtists(formData.country, formData.number);
   };
 
   return (
@@ -29,7 +28,7 @@ export default function Home() {
         <title>Music Stats</title>
         <meta
           name="description"
-          content="Find your best tracks and artists according to country!"
+          content="Find your best tracks and artists according to a country!"
         />
       </Head>
       <main>
@@ -39,6 +38,8 @@ export default function Home() {
           setFormData={setFormData}
           handleSubmit={handleSubmit}
         />
+        {topTracks.tracks && <TracksChart topTracks={topTracks} />}
+        {topArtists.topartists && <ArtistsChart topArtists={topArtists} />}
       </main>
     </div>
   );
