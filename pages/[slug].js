@@ -1,6 +1,7 @@
 import { useArtistDetail } from "../hooks/useArtistDetail";
 
 const ArtistDetails = ({ details }) => {
+  console.log(details);
   return (
     <main>
       <h1>I am {details.artist.name} details page</h1>

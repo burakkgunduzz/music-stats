@@ -33,11 +33,7 @@ const TracksChart = ({ topTracks }) => {
     },
   };
 
-  return (
-    <div>
-      <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
-  );
+  return <HighchartsReact highcharts={Highcharts} options={options} />;
 };
 
 export default TracksChart;
