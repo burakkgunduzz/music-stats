@@ -1,8 +1,14 @@
-import { useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import { useRouter } from "next/router";
 
 const ArtistsChart = ({ topArtists }) => {
+  const router = useRouter();
+
+  const redirectToArtisPage = (artist) => {
+    router.push(`./${artist}`);
+  };
+
   const options = {
     title: {
       text: `Top ${topArtists.topartists["@attr"].perPage} Artists in ${topArtists.topartists["@attr"].country}`,
@@ -29,7 +35,7 @@ const ArtistsChart = ({ topArtists }) => {
         point: {
           events: {
             click(e) {
-              console.log(e.point.category);
+              redirectToArtisPage(e.point.category);
             },
           },
         },

@@ -1,4 +1,4 @@
-export const useArtistDetail = (setArtistDetail) => {
+export const useArtistDetail = () => {
   const getArtistInfo = async (artist) => {
     const fetchData = await fetch(
       "http://ws.audioscrobbler.com/2.0/?" +
@@ -10,8 +10,7 @@ export const useArtistDetail = (setArtistDetail) => {
           autocorrect: 1,
         })
     );
-    const data = await fetchData.json();
-    setArtistDetail(data);
+    return fetchData;
   };
   return { getArtistInfo };
 };

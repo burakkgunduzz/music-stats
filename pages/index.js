@@ -3,7 +3,6 @@ import Head from "next/head";
 import Form from "../components/Form";
 import { useTopTracks } from "../hooks/useTopTracks";
 import { useTopArtists } from "../hooks/useTopArtists";
-import { useArtistDetail } from "../hooks/useArtistDetail";
 import TracksChart from "../components/TracksChart";
 import ArtistsChart from "../components/ArtistsChart";
 
