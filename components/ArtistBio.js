@@ -1,4 +1,6 @@
-const ArtistBio = ({ artistBio, artistName }) => {
+import ArtistStats from "./ArtistStats";
+
+const ArtistBio = ({ artistBio, artistName, artistStats }) => {
   return (
     <div>
       <h1>{artistName}</h1>
@@ -8,6 +10,7 @@ const ArtistBio = ({ artistBio, artistName }) => {
           read more
         </a>
       </p>
+      <ArtistStats artistStats={artistStats} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
-const ArtistPhoto = ({ artistPhoto }) => {
+const ArtistPhoto = ({ artistPhoto, artistName }) => {
   return (
     <div>
-      <img src={artistPhoto} alt="" />
+      <img src={artistPhoto} alt={artistName} />
     </div>
   );
 };
