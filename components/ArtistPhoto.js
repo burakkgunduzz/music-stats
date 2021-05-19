@@ -1,9 +1,5 @@
 const ArtistPhoto = ({ artistPhoto, artistName }) => {
-  return (
-    <div>
-      <img src={artistPhoto} alt={artistName} />
-    </div>
-  );
+  return <div>{artistPhoto && <img src={artistPhoto} alt={artistName} />}</div>;
 };
 
 export default ArtistPhoto;

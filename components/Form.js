@@ -15,7 +15,7 @@ const Form = ({ formData, setFormData, handleSubmit }) => {
           onChange={handleInputChange}
           id="country-input"
           type="text"
-          placeholder="Turkey, France etc."
+          placeholder="Poland, Italy etc."
         />
       </div>
       <div className={styles.inputWrapper}>

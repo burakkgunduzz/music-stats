@@ -1,10 +1,18 @@
-const SimilarArtist = ({ artist }) => {
+const SimilarArtist = ({ artist, photoUrl }) => {
+  let url = "";
+  photoUrl.map((address) => {
+    if (address) {
+      url = address;
+    }
+  });
   return (
     <div>
-      <a target="_blank" href={artist.url}>
-        <img src={artist.image[1]["#text"]} alt={artist.name} /> <br />
-        {artist.name}
-      </a>
+      {url && (
+        <a target="_blank" href={artist.url}>
+          <img src={url} alt={artist.name} /> <br />
+          {artist.name}
+        </a>
+      )}
     </div>
   );
 };
