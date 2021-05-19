@@ -1,10 +1,16 @@
+import MainArtistDetails from "../components/MainArtistDetails";
 import { useArtistDetail } from "../hooks/useArtistDetail";
+import styles from "../styles/ArtistDetails.module.css";
 
 const ArtistDetails = ({ details }) => {
   console.log(details);
   return (
     <main>
-      <h1>I am {details.artist.name} details page</h1>
+      <MainArtistDetails
+        artistPhoto={details.artist?.image[4]["#text"]}
+        artistBio={details.artist.bio}
+        artistName={details.artist.name}
+      />
     </main>
   );
 };

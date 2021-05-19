@@ -8,6 +8,10 @@
   border-radius: 20px;
 }
 
+.form h1 {
+  color: var(--secondaryColor);
+}
+
 .inputWrapper {
   display: flex;
   flex-direction: column;
@@ -20,6 +24,10 @@
   margin-top: 1rem;
   border-radius: 10px;
   font-size: 1.2rem;
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 10px;
+  box-shadow: inset 9px 9px 9px #cbced1, inset -9px -9px 9px white;
 }
 
 .inputWrapper button {
@@ -30,6 +38,8 @@
   border-radius: 10px;
   cursor: pointer;
   border: none;
+  background: var(--primaryColor);
+  color: white;
 }
 
 .inputWrapper button:hover {
