@@ -5,7 +5,12 @@ import { useArtistDetail } from "../hooks/useArtistDetail";
 import styles from "../styles/ArtistDetails.module.css";
 
 const ArtistDetails = ({ details, artistPhoto, similarArtistsData }) => {
-  const artistPhotoUrl = artistPhoto.artists[0].strArtistThumb;
+  let artistPhotoUrl = "";
+  try {
+    artistPhotoUrl = artistPhoto.artists[0].strArtistThumb;
+  } catch (e) {
+    console.log(e);
+  }
 
   return (
     <main className={styles.main}>
@@ -43,27 +48,37 @@ export async function getServerSideProps({ query: { slug } }) {
   );
 
   const forSimilarArtist1 = await fetch(
-    `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[0]}`
+    encodeURI(
+      `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[0]}`
+    )
   );
   const artistPhoto1 = await forSimilarArtist1.json();
 
   const forSimilarArtist2 = await fetch(
-    `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[1]}`
+    encodeURI(
+      `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[1]}`
+    )
   );
   const artistPhoto2 = await forSimilarArtist2.json();
 
   const forSimilarArtist3 = await fetch(
-    `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[2]}`
+    encodeURI(
+      `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[2]}`
+    )
   );
   const artistPhoto3 = await forSimilarArtist3.json();
 
   const forSimilarArtist4 = await fetch(
-    `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[3]}`
+    encodeURI(
+      `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[3]}`
+    )
   );
   const artistPhoto4 = await forSimilarArtist4.json();
 
   const forSimilarArtist5 = await fetch(
-    `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[4]}`
+    encodeURI(
+      `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtists[4]}`
+    )
   );
   const artistPhoto5 = await forSimilarArtist5.json();
 

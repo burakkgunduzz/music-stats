@@ -3,11 +3,19 @@ import styles from "../styles/SimilarArtists.module.css";
 
 const SimilarArtists = ({ similarArtists, similarArtistsData }) => {
   const similarArtistsPhotos = similarArtistsData.map((artist) => {
-    return {
-      photoUrl: artist.artists[0].strArtistThumb,
-      artistName: artist.artists[0].strArtist,
-    };
+    try {
+      return {
+        photoUrl: artist.artists[0].strArtistThumb,
+        artistName: artist.artists[0].strArtist,
+      };
+    } catch {
+      return {
+        photoUrl: " ",
+        artistName: " ",
+      };
+    }
   });
+
   return (
     <section className={styles.container}>
       <h3 className={styles.title}>

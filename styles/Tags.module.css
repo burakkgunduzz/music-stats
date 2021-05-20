@@ -4,7 +4,8 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 20px;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  box-shadow: 14px 14px 20px var(--shadowColorRight),
+    -14px -14px 20px var(--shadowColorLeft);
   padding: 2rem;
 }
 

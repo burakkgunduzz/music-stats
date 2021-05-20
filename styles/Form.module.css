@@ -3,8 +3,8 @@
   flex-direction: column;
   margin: 10vh 10vw;
   padding: 5vh 5vw;
-  background: #ecf0f3;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  box-shadow: 14px 14px 20px var(--shadowColorRight),
+    -14px -14px 20px var(--shadowColorLeft);
   border-radius: 20px;
   justify-content: center;
 }
@@ -25,16 +25,17 @@
   margin-top: 1rem;
   border-radius: 10px;
   font-size: 1.2rem;
-  background: #ecf0f3;
   padding: 10px;
   padding-left: 10px;
-  box-shadow: inset 9px 9px 9px #cbced1, inset -9px -9px 9px white;
+  box-shadow: inset 9px 9px 9px var(--shadowColorRight),
+    inset -9px -9px 9px var(--shadowColorLeft);
 }
 
 .inputWrapper button {
   height: 2.5rem;
   font-weight: 900;
-  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  box-shadow: 15px 15px 15px var(--shadowColorRight),
+    -9px -9px 9px var(--shadowColorLeft);
   transition: 0.5s;
   border-radius: 10px;
   cursor: pointer;

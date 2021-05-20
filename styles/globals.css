@@ -10,6 +10,8 @@ body {
 :root {
   --primaryColor: #00509d;
   --secondaryColor: #3c6e71;
+  --shadowColorRight: #cbced1;
+  --shadowColorLeft: white;
 }
 *,
 *::before,
