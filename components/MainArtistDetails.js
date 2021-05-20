@@ -1,5 +1,6 @@
 import ArtistBio from "./ArtistBio";
 import ArtistPhoto from "./ArtistPhoto";
+import styles from "../styles/MainArtistDetails.module.css";
 
 const MainArtistDetails = ({
   artistPhoto,
@@ -8,7 +9,7 @@ const MainArtistDetails = ({
   artistStats,
 }) => {
   return (
-    <article>
+    <article className={styles.container}>
       <ArtistPhoto artistPhoto={artistPhoto} artistName={artistName} />
       <ArtistBio
         artistBio={artistBio}

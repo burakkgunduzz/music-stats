@@ -8,7 +8,7 @@ const ArtistDetails = ({ details, artistPhoto, similarArtistsData }) => {
   const artistPhotoUrl = artistPhoto.artists[0].strArtistThumb;
 
   return (
-    <main>
+    <main className={styles.main}>
       <MainArtistDetails
         artistPhoto={artistPhotoUrl}
         artistBio={details.artist.bio}

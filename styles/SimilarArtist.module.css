@@ -1,0 +1,16 @@
+.image {
+  width: 10rem;
+  border-radius: 4rem;
+}
+
+.artistName {
+  color: var(--secondaryColor);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.anchorTag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

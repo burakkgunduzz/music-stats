@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 20px;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  padding: 2rem;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  color: var(--primaryColor);
+}
+
+.tagContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.tagContainer a {
+  color: var(--secondaryColor);
+}

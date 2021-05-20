@@ -1,0 +1,19 @@
+.title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2rem;
+  color: var(--primaryColor);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.similarArtistsContainer {
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,8 +1,14 @@
+import styles from "../styles/ArtistStats.module.css";
+
 const ArtistStats = ({ artistStats }) => {
   return (
     <div>
-      <p>listeners: {artistStats.listeners}</p>
-      <p>playcount: {artistStats.playcount}</p>
+      <p>
+        <span className={styles.span}>listeners: </span> {artistStats.listeners}
+      </p>
+      <p>
+        <span className={styles.span}>playcount: </span> {artistStats.playcount}
+      </p>
     </div>
   );
 };

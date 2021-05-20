@@ -1,3 +1,5 @@
+import styles from "../styles/SimilarArtist.module.css";
+
 const SimilarArtist = ({ artist, photoUrl }) => {
   let url = "";
   photoUrl.map((address) => {
@@ -8,9 +10,9 @@ const SimilarArtist = ({ artist, photoUrl }) => {
   return (
     <div>
       {url && (
-        <a target="_blank" href={artist.url}>
-          <img src={url} alt={artist.name} /> <br />
-          {artist.name}
+        <a className={styles.anchorTag} target="_blank" href={artist.url}>
+          <img src={url} alt={artist.name} className={styles.image} />
+          <span className={styles.artistName}>{artist.name}</span>
         </a>
       )}
     </div>
