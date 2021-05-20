@@ -16,6 +16,7 @@ const Form = ({ formData, setFormData, handleSubmit }) => {
           id="country-input"
           type="text"
           placeholder="Poland, Italy etc."
+          required
         />
       </div>
       <div className={styles.inputWrapper}>
@@ -26,6 +27,7 @@ const Form = ({ formData, setFormData, handleSubmit }) => {
           id="number-input"
           type="number"
           placeholder="enter number"
+          required
         />
       </div>
       <div className={styles.inputWrapper}>

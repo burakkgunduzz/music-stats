@@ -8,7 +8,7 @@ const SimilarArtist = ({ artist, photoUrl }) => {
     }
   });
   return (
-    <div>
+    <div className={styles.container}>
       {url && (
         <a className={styles.anchorTag} target="_blank" href={artist.url}>
           <img src={url} alt={artist.name} className={styles.image} />

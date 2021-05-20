@@ -2,7 +2,7 @@ import styles from "../styles/ArtistStats.module.css";
 
 const ArtistStats = ({ artistStats }) => {
   return (
-    <div>
+    <div className={styles.container}>
       <p>
         <span className={styles.span}>listeners: </span> {artistStats.listeners}
       </p>

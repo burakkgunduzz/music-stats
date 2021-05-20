@@ -3,3 +3,9 @@
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
   border-radius: 20px;
 }
+
+@media screen and (max-width: 1220px) {
+  .container {
+    flex-direction: column;
+  }
+}

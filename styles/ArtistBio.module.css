@@ -17,3 +17,18 @@
 .biography {
   line-height: 160%;
 }
+
+@media screen and (max-width: 1220px) {
+  .title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  .title {
+    margin: 0;
+  }
+  .biography {
+    font-size: 0.8rem;
+  }
+}

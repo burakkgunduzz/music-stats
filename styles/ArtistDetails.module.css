@@ -1,6 +1,33 @@
 .main {
-  display: grid;
   margin-left: 20rem;
   margin-right: 20rem;
   padding: 2rem 5rem;
+}
+
+@media screen and (max-width: 1700px) {
+  .main {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .main {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .main {
+    padding: 0;
+  }
 }

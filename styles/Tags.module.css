@@ -23,3 +23,19 @@
 .tagContainer a {
   color: var(--secondaryColor);
 }
+
+@media screen and (max-width: 600px) {
+  .tag {
+    flex: 1 0 150px;
+    margin-bottom: 20px;
+  }
+  .tagContainer {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .tag {
+    flex: 1 0 80px;
+  }
+}
