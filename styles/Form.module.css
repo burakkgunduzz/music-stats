@@ -18,7 +18,7 @@
 }
 
 .form h1 {
-  color: var(--secondaryColor);
+  color: var(--primaryColor);
 }
 
 .inputWrapper {
@@ -48,7 +48,7 @@
   border-radius: 10px;
   cursor: pointer;
   border: none;
-  background: var(--primaryColor);
+  background: var(--secondaryColor);
   color: white;
 }
 
@@ -80,9 +80,22 @@
   }
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 825px) {
   .form {
-    height: 80vh;
+    height: 70vh;
     width: 90vw;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-height: 812px) {
+  .form {
+    height: 78vh;
+  }
+}
+
+@media screen and (max-height: 655px) {
+  .form {
+    height: 92vh;
   }
 }

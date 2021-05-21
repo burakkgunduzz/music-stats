@@ -8,7 +8,7 @@
 }
 
 .artistName {
-  color: var(--secondaryColor);
+  color: var(--primaryColor);
   text-align: center;
   padding: 0.5rem;
 }
@@ -29,7 +29,6 @@
   .container {
     flex: 1 0 200px;
     margin-bottom: 1rem;
-    border: 2px solid red;
   }
 }
 
