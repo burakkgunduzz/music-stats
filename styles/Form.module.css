@@ -9,6 +9,14 @@
   justify-content: center;
 }
 
+.headphoneIcon {
+  align-self: center;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 14px 14px 20px var(--shadowColorRight),
+    -14px -14px 20px var(--shadowColorLeft);
+}
+
 .form h1 {
   color: var(--secondaryColor);
 }

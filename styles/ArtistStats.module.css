@@ -2,6 +2,11 @@
   color: var(--secondaryColor);
 }
 
+.paragraph {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 1220px) {
   .container {
     display: flex;

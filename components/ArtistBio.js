@@ -1,5 +1,6 @@
 import ArtistStats from "./ArtistStats";
 import styles from "../styles/ArtistBio.module.css";
+import Music from "../public/images/music.svg";
 
 const ArtistBio = ({ artistBio, artistName, artistStats }) => {
   let bioContent = "";
@@ -16,7 +17,9 @@ const ArtistBio = ({ artistBio, artistName, artistStats }) => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{artistName}</h1>
+      <h1 className={styles.title}>
+        {artistName} <Music />
+      </h1>
       <p className={styles.biography}>
         {bioContent}...{" "}
         <a

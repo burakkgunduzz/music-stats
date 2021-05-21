@@ -25,6 +25,11 @@
   color: var(--secondaryColor);
 }
 
+.tag {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 600px) {
   .tag {
     flex: 1 0 150px;

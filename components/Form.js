@@ -1,4 +1,5 @@
 import styles from "../styles/Form.module.css";
+import Headphone from "../public/images/headphones.svg";
 
 const Form = ({ formData, setFormData, handleSubmit }) => {
   const handleInputChange = (e) => {
@@ -7,6 +8,9 @@ const Form = ({ formData, setFormData, handleSubmit }) => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.headphoneIcon}>
+        <Headphone width={50} height={50} />
+      </div>
       <h1>MUSIC STATS</h1>
       <div className={styles.inputWrapper}>
         <label htmlFor="country-input">Country Name </label>
