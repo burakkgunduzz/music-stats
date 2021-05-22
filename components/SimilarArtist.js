@@ -2,7 +2,7 @@ import styles from "../styles/SimilarArtist.module.css";
 
 const SimilarArtist = ({ artist, photoUrl }) => {
   let url = "";
-  photoUrl.map((address) => {
+  photoUrl?.map((address) => {
     if (address) {
       url = address;
     }
