@@ -51,6 +51,10 @@ export default function Home() {
           name="description"
           content="Find your best tracks and artists according to a country!"
         />
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="upgrade-insecure-requests"
+        ></meta>
       </Head>
       <main className={styles.container}>
         <Form
