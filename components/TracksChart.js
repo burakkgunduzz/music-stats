@@ -14,7 +14,7 @@ const TracksChart = ({ topTracks }) => {
       style: {
         color: "white",
       },
-      text: `Top ${topTracks.tracks["@attr"].perPage} Tracks in ${topTracks.tracks["@attr"].country}`,
+      text: `Top ${topTracks?.tracks["@attr"]?.perPage} Tracks in ${topTracks.tracks["@attr"].country}`,
     },
     xAxis: {
       categories: topTracks.tracks.track.map((track) => track.name),
