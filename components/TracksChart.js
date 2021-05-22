@@ -7,11 +7,35 @@ if (typeof Highcharts === "object") {
 
 const TracksChart = ({ topTracks }) => {
   const options = {
+    chart: {
+      backgroundColor: "var(--shadowColorLeft)",
+    },
     title: {
+      style: {
+        color: "white",
+      },
       text: `Top ${topTracks.tracks["@attr"].perPage} Tracks in ${topTracks.tracks["@attr"].country}`,
     },
     xAxis: {
       categories: topTracks.tracks.track.map((track) => track.name),
+      labels: {
+        style: {
+          color: "white",
+        },
+      },
+    },
+    yAxis: {
+      labels: {
+        style: {
+          color: "white",
+        },
+      },
+      title: {
+        text: "Listened",
+        style: {
+          color: "white",
+        },
+      },
     },
     series: [
       {

@@ -10,11 +10,35 @@ const ArtistsChart = ({ topArtists }) => {
   };
 
   const options = {
+    chart: {
+      backgroundColor: "var(--shadowColorLeft)",
+    },
     title: {
+      style: {
+        color: "white",
+      },
       text: `Top ${topArtists.topartists["@attr"].perPage} Artists in ${topArtists.topartists["@attr"].country}`,
     },
     xAxis: {
       categories: topArtists.topartists.artist.map((artist) => artist.name),
+      labels: {
+        style: {
+          color: "white",
+        },
+      },
+    },
+    yAxis: {
+      labels: {
+        style: {
+          color: "white",
+        },
+      },
+      title: {
+        text: "Listened",
+        style: {
+          color: "white",
+        },
+      },
     },
     series: [
       {
@@ -29,6 +53,7 @@ const ArtistsChart = ({ topArtists }) => {
     ],
     plotOptions: {
       series: {
+        cursor: "pointer",
         dataLabels: {
           enabled: true,
         },
