@@ -1,52 +1,18 @@
 import SimilarArtist from "./SimilarArtist";
 import { useEffect, useState } from "react";
 import styles from "../styles/SimilarArtists.module.css";
+import { getArtistPhoto } from "../utilies/getArtistPhoto";
 
 const SimilarArtists = ({ similarArtists }) => {
   const [similarArtistsData, setSimilarArtistsData] = useState([]);
   const [similarArtistsPhotos, setSimilarArtistsPhotos] = useState([]);
 
   useEffect(() => {
-    const similarArtistNames = similarArtists.map((artist) => artist.name);
-    fetch(
-      encodeURI(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtistNames[0]}`
+    similarArtists.map((artist) =>
+      getArtistPhoto(artist.name).then((data) =>
+        setSimilarArtistsData((prevVal) => [...prevVal, data])
       )
-    )
-      .then((res) => res.json())
-      .then((data) => setSimilarArtistsData((prevVal) => [...prevVal, data]));
-
-    fetch(
-      encodeURI(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtistNames[1]}`
-      )
-    )
-      .then((res) => res.json())
-      .then((data) => setSimilarArtistsData((prevVal) => [...prevVal, data]));
-
-    fetch(
-      encodeURI(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtistNames[2]}`
-      )
-    )
-      .then((res) => res.json())
-      .then((data) => setSimilarArtistsData((prevVal) => [...prevVal, data]));
-
-    fetch(
-      encodeURI(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtistNames[3]}`
-      )
-    )
-      .then((res) => res.json())
-      .then((data) => setSimilarArtistsData((prevVal) => [...prevVal, data]));
-
-    fetch(
-      encodeURI(
-        `https://www.theaudiodb.com/api/v1/json/1/search.php?s=${similarArtistNames[4]}`
-      )
-    )
-      .then((res) => res.json())
-      .then((data) => setSimilarArtistsData((prevVal) => [...prevVal, data]));
+    );
   }, []);
 
   useEffect(() => {

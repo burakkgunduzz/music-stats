@@ -11,7 +11,7 @@ const SimilarArtist = ({ artist, photoUrl }) => {
     <>
       {url && (
         <div className={styles.container}>
-          <a className={styles.anchorTag} target="_blank" href={artist.url}>
+          <a className={styles.anchorTag} href={artist.name}>
             <img src={url} alt={artist.name} className={styles.image} />
             <span className={styles.artistName}>{artist.name}</span>
           </a>
