@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Form from "../components/Form";
-import { useTopTracks } from "../hooks/useTopTracks";
-import { useTopArtists } from "../hooks/useTopArtists";
+import { getTopDetails } from "../utilies/helpers/getTopDetails";
+import LAST_FM_METHODS from "../utilies/constants/lastFmMethods";
 import TracksChart from "../components/TracksChart";
 import ArtistsChart from "../components/ArtistsChart";
 import HomePageImage from "../components/HomePageImage";
@@ -16,9 +16,6 @@ export default function Home() {
 
   const [topTracks, setTopTracks] = useState({});
   const [topArtists, setTopArtists] = useState({});
-
-  const { getTopTracks } = useTopTracks(setTopTracks);
-  const { getTopArtists } = useTopArtists(setTopArtists);
 
   useEffect(() => {
     if (topArtists.topartists && topTracks.tracks && submitted) {
@@ -38,8 +35,16 @@ export default function Home() {
       return Notify.warning("No more than 50!", { position: "left-bottom" });
     //here we display image again to escape from unmounted component error
     setDisplayImage(true);
-    getTopTracks(formData.country, formData.number);
-    getTopArtists(formData.country, formData.number);
+    getTopDetails(
+      formData.country,
+      formData.number,
+      LAST_FM_METHODS.GET_TOP_ARTISTS
+    ).then((data) => setTopArtists(data));
+    getTopDetails(
+      formData.country,
+      formData.number,
+      LAST_FM_METHODS.GET_TOP_TRACKS
+    ).then((data) => setTopTracks(data));
     setSubmitted(true);
   };
 
@@ -52,7 +57,7 @@ export default function Home() {
           content="Find your best tracks and artists according to a country!"
         />
         <meta
-          http-equiv="Content-Security-Policy"
+          httpEquiv="Content-Security-Policy"
           content="upgrade-insecure-requests"
         ></meta>
       </Head>

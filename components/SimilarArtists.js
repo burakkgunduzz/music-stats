@@ -1,7 +1,7 @@
 import SimilarArtist from "./SimilarArtist";
 import { useEffect, useState } from "react";
 import styles from "../styles/SimilarArtists.module.css";
-import { getArtistPhoto } from "../utilies/getArtistPhoto";
+import { getArtistPhoto } from "../utilies/helpers/getArtistPhoto";
 
 const SimilarArtists = ({ similarArtists }) => {
   const [similarArtistsData, setSimilarArtistsData] = useState([]);

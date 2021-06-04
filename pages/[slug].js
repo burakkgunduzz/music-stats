@@ -1,7 +1,7 @@
 import MainArtistDetails from "../components/MainArtistDetails";
 import SimilarArtists from "../components/SimilarArtists";
 import Tags from "../components/Tags";
-import { useArtistDetail } from "../hooks/useArtistDetail";
+import { getArtistInfo } from "../utilies//helpers/getArtistDetail";
 import styles from "../styles/ArtistDetails.module.css";
 
 const ArtistDetails = ({ details }) => {
@@ -21,7 +21,6 @@ const ArtistDetails = ({ details }) => {
 export default ArtistDetails;
 
 export async function getServerSideProps({ query: { slug } }) {
-  const { getArtistInfo } = useArtistDetail();
   const data = await getArtistInfo(slug);
   const details = await data.json();
 
