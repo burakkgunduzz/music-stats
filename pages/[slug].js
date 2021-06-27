@@ -9,7 +9,7 @@ const ArtistDetails = ({ details }) => {
   return (
     <>
     <Head>
-    <title>Music Stats/{details.artist.name}</title>
+    <title>Music Stats /{details.artist.name}</title>
         <meta
           name="description"
           content={details.artist.bio.content}
